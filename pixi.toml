@@ -17,6 +17,7 @@ uv = "*"
 
 [dependencies]
 local-inference-bench = { path = "." }
+"llama.cpp" = "*"
 
 [feature.test.dependencies]
 pytest = "*"
