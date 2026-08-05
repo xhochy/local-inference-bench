@@ -1,0 +1,23 @@
+In CI this fails to install with:
+```
+  /Users/runner/.pixi/bin/pixi install -e py314 --locked --manifest-path /Users/runner/work/local-inference-bench/local-inference-bench/pixi.toml --color always
+  Error:   × failed to build 'local-inference-bench' from '.'
+    ├─▶   × could not initialize the build-backend
+  
+    ├─▶   × failed to solve the environment
+  
+    ╰─▶ Cannot solve the request because of: pixi-build-python * cannot be installed because there are no viable options:
+        ├─ pixi-build-python 0.6.0 | 0.7.0 | ... | 0.8.3 would require
+        │  └─ pixi-build-api-version >=5,<6, for which no candidates were found.
+        ├─ pixi-build-python 0.4.4 | 0.4.5 | ... | 0.5.2 would require
+        │  └─ pixi-build-api-version >=4,<5, for which no candidates were found.
+        ├─ pixi-build-python 0.4.0 | 0.4.1 | 0.4.2 | 0.4.3 would require
+        │  └─ pixi-build-api-version >=2,<3, for which no candidates were found.
+        ├─ pixi-build-python 0.3.1 | 0.3.2 would require
+        │  └─ pixi-build-api-version >=0,<2, for which no candidates were found.
+        └─ pixi-build-python 0.2.0 would require
+           └─ pixi-build-api-version >=0,<1, for which no candidates were found.
+        The following packages are incompatible
+        └─ pixi-build-python * cannot be installed because there are no viable options:
+           └─ pixi-build-python 0.8.5 is excluded because the package is uploaded after the cutoff date of 2026-07-29 14:40:23
+```
