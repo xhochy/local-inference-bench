@@ -5,6 +5,9 @@ exclude-newer = "7d"
 platforms = ["osx-arm64", "osx-64", "linux-64", "win-64"]
 preview = ["pixi-build"]
 
+[exclude-newer]
+pixi-build-python = "0d"
+
 [package]
 name = "local-inference-bench"
 [package.build.backend]
