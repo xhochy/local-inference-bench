@@ -1,0 +1,13 @@
+What's the error in 0fafb6d0ee50ee48a89de78012f4f5d5d37e045e5c1a4ec385cd86c0c42f91e4.log ?
+
+---
+
+I rerun with much smaller arguments and it still fails
+
+---
+
+I would like to keep the current `|| (cat $log_file` approach. How could I pass there the right exit code?
+
+---
+
+It's exit code 139

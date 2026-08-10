@@ -1,0 +1,98 @@
+{
+  "cli_version": "dev",
+  "checkpoint_id": "01KZPDWQRD5ZZ0Z1F8XAPVPKJH",
+  "session_id": "019febcf-b221-7659-988c-f01ed85de1e9",
+  "strategy": "manual-commit",
+  "created_at": "2026-08-10T18:10:30.262925Z",
+  "branch": "memory-usage",
+  "checkpoints_count": 4,
+  "save_step_count": 4,
+  "files_touched": [
+    "pixi.lock",
+    "pixi.toml"
+  ],
+  "agent": "Pi",
+  "model": "gpt-5.6-sol",
+  "turn_id": "6b72e2322857",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 62608,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 491520,
+    "output_tokens": 7072,
+    "api_call_count": 22
+  },
+  "session_metrics": {
+    "turn_count": 4
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-08-10T18:10:30.250501Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 29,
+    "human_removed": 2852,
+    "total_committed": 0,
+    "total_lines_changed": 2881,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 3814,
+      "user_lines_removed": 2874,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "inspect-memory-usage.sh": 13,
+        "pixi.lock": 3725,
+        "pixi.toml": 15,
+        "tee": 61
+      },
+      "user_removed_per_file": {
+        "pixi.lock": 2868,
+        "pixi.toml": 6
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 2,
+      "user_lines_removed": 1,
+      "agent_lines_added": 3814,
+      "agent_lines_removed": 2874,
+      "user_added_per_file": {
+        "inspect-memory-usage.sh": 2
+      },
+      "user_removed_per_file": {
+        "inspect-memory-usage.sh": 1
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 2,
+      "user_lines_removed": 1,
+      "agent_lines_added": 3814,
+      "agent_lines_removed": 2874,
+      "user_added_per_file": {
+        "inspect-memory-usage.sh": 2
+      },
+      "user_removed_per_file": {
+        "inspect-memory-usage.sh": 1
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 2,
+      "user_lines_removed": 1,
+      "agent_lines_added": 3814,
+      "agent_lines_removed": 2874,
+      "user_added_per_file": {
+        "inspect-memory-usage.sh": 2
+      },
+      "user_removed_per_file": {
+        "inspect-memory-usage.sh": 1
+      }
+    }
+  ]
+}
