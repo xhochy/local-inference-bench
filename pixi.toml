@@ -1,12 +1,12 @@
 [workspace]
 name = "local-inference-bench"
-channels = ["conda-forge"]
-exclude-newer = "7d"
-platforms = ["osx-arm64", "osx-64", "linux-64", "win-64"]
+channels = ["https://prefix.dev/inference-extensions", "conda-forge"]
+platforms = [
+  "osx-arm64",
+  { platform = "linux-64", cuda = "12.9", glibc = "2.34" },
+  { platform = "linux-aarch64", cuda = "12.9", glibc = "2.34" },
+]
 preview = ["pixi-build"]
-
-[exclude-newer]
-pixi-build-python = "0d"
 
 [package]
 name = "local-inference-bench"
@@ -21,6 +21,16 @@ uv = "*"
 [dependencies]
 local-inference-bench = { path = "." }
 "llama.cpp" = "*"
+openssl = ">=3.6.3,<4"
+
+[feature.laguna.dependencies]
+"llama.cpp" = { version = "*", build = "laguna*", channel = "https://prefix.dev/inference-extensions" }
+
+[feature.inkling.dependencies]
+"llama.cpp" = { version = "*", build = "unsloth_inkling_*", channel = "https://prefix.dev/inference-extensions" }
+
+[feature.vanilla.dependencies]
+"llama.cpp" = { version = "*", channel = "conda-forge" }
 
 [feature.test.dependencies]
 pytest = "*"
@@ -57,3 +67,21 @@ python = "3.14.*"
 [environments]
 default = ["test", "build", "lint"]
 py314 = ["py314", "test"]
+inkling = { features = [
+  "test",
+  "build",
+  "lint",
+  "inkling",
+], solve-group = "inkling" }
+laguna = { features = [
+  "test",
+  "build",
+  "lint",
+  "laguna",
+], solve-group = "laguna" }
+vanilla = { features = [
+  "test",
+  "build",
+  "lint",
+  "vanilla",
+], solve-group = "vanilla" }
