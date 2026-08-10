@@ -3,7 +3,9 @@ name = "local-inference-bench"
 channels = ["https://prefix.dev/inference-extensions", "conda-forge"]
 platforms = [
   "osx-arm64",
+  { platform = "linux-64", glibc = "2.34" },
   { platform = "linux-64", cuda = "12.9", glibc = "2.34" },
+  { platform = "linux-aarch64", glibc = "2.34" },
   { platform = "linux-aarch64", cuda = "12.9", glibc = "2.34" },
 ]
 preview = ["pixi-build"]
