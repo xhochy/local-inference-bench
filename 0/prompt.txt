@@ -1,0 +1,1 @@
+Why does the `2>&1` forward in inspect-memory-usage.sh not work?

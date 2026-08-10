@@ -1,0 +1,59 @@
+{
+  "cli_version": "dev",
+  "checkpoint_id": "01KZPDWQRD5ZZ0Z1F8XAPVPKJH",
+  "session_id": "019feba0-b69b-7920-9035-f35dce4487b9",
+  "strategy": "manual-commit",
+  "created_at": "2026-08-10T18:10:30.068085Z",
+  "branch": "memory-usage",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    "pixi.lock",
+    "pixi.toml"
+  ],
+  "agent": "Pi",
+  "model": "gpt-5.6-sol",
+  "turn_id": "e352af95b379",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 7480,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 479,
+    "api_call_count": 2
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-08-10T18:10:30.059623Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 25,
+    "human_removed": 2853,
+    "total_committed": 0,
+    "total_lines_changed": 2878,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 3812,
+      "user_lines_removed": 2874,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "inspect-memory-usage.sh": 11,
+        "pixi.lock": 3725,
+        "pixi.toml": 15,
+        "tee": 61
+      },
+      "user_removed_per_file": {
+        "pixi.lock": 2868,
+        "pixi.toml": 6
+      }
+    }
+  ]
+}
